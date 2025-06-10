@@ -7,7 +7,7 @@ dotenv.config();
 
 const app = express();
 app.use(cors({
-  origin: 'http://localhost:8080', // or whatever your Vite/React port is
+  origin: ['http://localhost:8080','https://ai-dev-assistant-wine.vercel.app/'], // or whatever your Vite/React port is
   methods: ['POST'],
   credentials: true
 }));
