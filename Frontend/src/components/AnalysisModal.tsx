@@ -171,9 +171,11 @@ const AnalysisModal = ({ isOpen, onClose, title, type }: AnalysisModalProps) => 
     errors: 'errors'
   };
 
+  // fetch(`http://localhost:5000/api/code/${type}`, {
+
   const fetchAnalysis = async (code: string, language: string) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/code/${type}`, {
+      const response = await fetch(`https://ai-dev-assistant-ywdj.vercel.app/api/code/${type}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
