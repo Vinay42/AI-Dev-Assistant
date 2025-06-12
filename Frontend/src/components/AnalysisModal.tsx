@@ -159,7 +159,7 @@ interface AnalysisModalProps {
   isOpen: boolean;
   onClose: () => void;
   title: string;
-  type: 'review' | 'explain' | 'errors ';
+  type: 'review' | 'explain' | 'errors';
 }
 
 const AnalysisModal = ({ isOpen, onClose, title, type }: AnalysisModalProps) => {
