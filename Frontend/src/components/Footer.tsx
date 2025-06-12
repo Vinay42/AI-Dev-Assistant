@@ -7,13 +7,13 @@ const Footer = () => {
         </p>
         <div className="mt-4 md:mt-0 flex items-center space-x-4">
           <a
-            href="/privacy"
+            
             className="text-sm text-muted-foreground hover:underline"
           >
             Privacy Policy
           </a>
           <a
-            href="/terms"
+            
             className="text-sm text-muted-foreground hover:underline"
           >
             Terms of Service
