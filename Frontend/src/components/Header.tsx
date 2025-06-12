@@ -27,7 +27,7 @@ const Header = ({ onMenuToggle }: HeaderProps) => {
             className="md:hidden"
             onClick={onMenuToggle}
           >
-            <Menu className="h-5 w-5" />
+            {/* <Menu className="h-5 w-5" /> */}
           </Button>
           
           <div className="flex items-center gap-2">

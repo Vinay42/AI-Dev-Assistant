@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import AIInsightsBlog from "./pages/AIInsightsBlog";
 import CodeQualityBlog from "./pages/CodeQualityBlog";
+import ScrollToTop from './components/ScrollToTop';
 
 const queryClient = new QueryClient();
 
@@ -17,7 +18,9 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
+
           <Route path="/" element={<Index />} />
           <Route path="/blog/ai-insights" element={<AIInsightsBlog />} />
           <Route path="/blog/code-quality" element={<CodeQualityBlog />} />

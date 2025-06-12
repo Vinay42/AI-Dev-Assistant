@@ -48,11 +48,11 @@ const BlogLayout = ({ title, content, readTime, category }: BlogLayoutProps) => 
 
         {/* Interaction Bar */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 md:gap-0 py-4 md:py-6 border-t border-border">
-          <div className="flex items-center gap-4">
+          {/* <div className="flex items-center gap-4">
             <Button variant="ghost" size="sm">
               <Share2 className="h-4 w-4" />
             </Button>
-          </div>
+          </div> */}
         </div>
       </article>
     </div>

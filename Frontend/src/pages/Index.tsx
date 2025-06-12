@@ -8,11 +8,12 @@ import TechArticles from '@/components/TechArticles';
 import AnalysisModal from '@/components/AnalysisModal';
 import { CheckCircle, Code, Bug, BookOpen, Sparkles, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import Footer  from '@/components/Footer';
 
 const Index = () => {
   const navigate = useNavigate();
   const [activeModal, setActiveModal] = useState<{
-    type: 'review' | 'explain' | 'debug' | null;
+    type: 'review' | 'explain' | 'errors' | null;
     title: string;
   }>({ type: null, title: '' });
 
@@ -142,13 +143,7 @@ const Index = () => {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-border py-4 md:py-6 lg:py-8 px-4 md:px-6">
-        <div className="container max-w-7xl mx-auto text-center">
-          <p className="text-muted-foreground text-xs md:text-sm">
-            Built with ❤️ for developers • Powered by AI • Made with Lovable
-          </p>
-        </div>
-      </footer>
+      <Footer/>
 
       {/* Analysis Modal */}
       <AnalysisModal
