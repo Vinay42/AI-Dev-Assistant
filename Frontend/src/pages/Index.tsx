@@ -40,7 +40,7 @@ const Index = () => {
       description: "Identify bugs, runtime errors, and potential issues in your code with smart suggestions for fixes and prevention strategies.",
       buttonText: "Debug Code",
       gradient: "from-red-500 to-rose-600",
-      onClick: () => setActiveModal({ type: 'debug', title: 'Error Analysis & Debugging' })
+      onClick: () => setActiveModal({ type: 'errors', title: 'Error Analysis & Debugging' })
     }
   ];
 
