@@ -21,7 +21,7 @@ router.post('/explain', async (req, res) => {
 router.post('/errors', async (req, res) => {
   const { code } = req.body;
   console.log(req.body);
-  console.code(code);
+  console.log(code);
   const result = await analyzeErrors(code);
   res.json({ errors: result });
 });

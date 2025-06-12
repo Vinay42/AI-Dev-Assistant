@@ -2,7 +2,7 @@ import axios from 'axios';
 import 'dotenv/config'; 
 
 // Add this line to test
-console.log('Is API Key loaded?', process.env.GEMINI_API_KEY);
+// console.log('Is API Key loaded?', process.env.GEMINI_API_KEY);
 const GEMINI_API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${process.env.GEMINI_API_KEY}`;
 
 // async function callGemini(prompt) {
