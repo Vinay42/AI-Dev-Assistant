@@ -5,22 +5,6 @@ import 'dotenv/config';
 // console.log('Is API Key loaded?', process.env.GEMINI_API_KEY);
 const GEMINI_API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${process.env.GEMINI_API_KEY}`;
 
-// async function callGemini(prompt) {
-//   try {
-//     const response = await axios.post(GEMINI_API_URL, {
-//       contents: [
-//         {
-//           parts: [{ text: prompt }],
-//         },
-//       ],
-//     });
-
-//     return response.data.candidates?.[0]?.content?.parts?.[0]?.text || 'No response';
-//   } catch (error) {
-//     console.error('Gemini API error:', error.message);
-//     return 'Error communicating with Gemini API.';
-//   }
-// }
 
 async function callGemini(prompt) {
   // console.log(prompt)
@@ -41,9 +25,9 @@ async function callGemini(prompt) {
   }
 }
 
-export async function reviewCode(code) {
+export async function reviewCode(code,  language) {
   const prompt = `
-You are a senior software engineer. Review the following code strictly.
+You are a senior software engineer. Review the following ${language} code strictly.
 
 Return the result in this structure:
 
@@ -59,9 +43,9 @@ Keep the response compact and structured.
   return await callGemini(prompt);
 }
 
-export async function explainCode(code) {
+export async function explainCode(code,  language) {
   const prompt = `
-You are an expert programming teacher. Explain the following code clearly.
+You are an expert programming teacher. Explain the following ${language} code clearly
 
 Use this structure:
 - **Overview**: What the code does.
@@ -76,9 +60,9 @@ Be concise but accurate.
   return await callGemini(prompt);
 }
 
-export async function analyzeErrors(code) {
+export async function analyzeErrors(code,  language) {
   const prompt = `
-You are a bug analysis assistant. Analyze the following code for bugs or errors.
+You are a bug analysis assistant. Analyze the following ${language} code for bugs or errors.
 
 Respond using this format:
 - **Detected Issues**: Short bullet points of problems found.

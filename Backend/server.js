@@ -7,13 +7,13 @@ dotenv.config();
 
 const app = express();
 app.use(cors({
-  origin: ['http://localhost:8080','https://ai-dev-assistant-wine.vercel.app'], // or whatever your Vite/React port is
+  origin: ['http://localhost:8080',process.env.FRONT_END_API], // or whatever your Vite/React port is
   methods: ['GET', 'POST', 'OPTIONS'],
   credentials: true
 }));
 app.use(express.json());
 
-app.use('/api/code', codeRoutes);
+app.use('/api/', codeRoutes);
 
 app.get('/', (req, res) => {
   res.send('AI Backend Running');
