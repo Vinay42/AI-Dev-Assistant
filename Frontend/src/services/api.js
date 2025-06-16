@@ -40,7 +40,7 @@ class ApiService {
   }
 
   async analyzeCode(request) {
-    const response = await this.makeRequest('/analyze', request);
+    const response = await this.makeRequest('analyze', request);
     
     if (!response.success) {
       throw new Error(response.error || 'Analysis failed');
